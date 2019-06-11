@@ -5,8 +5,31 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ColorGenerator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="500" Width="400">
+    <StackPanel>
+        <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="100" Margin="0,20,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="ColorHexBox" Width="100" HorizontalAlignment="Center" Margin="0,10,0,0" />
+
+        <Grid Margin="20,50,20,0" HorizontalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="R" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+            <Slider x:Name="RedSlider" Grid.Row="0" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="10,0,0,0" ValueChanged="RedSlider_ValueChanged"/>
+
+            <TextBlock Text="G" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Margin="0,20,10,0"/>
+            <Slider x:Name="GreenSlider" Grid.Row="1" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="10,20,0,0" ValueChanged="GreenSlider_ValueChanged"/>
+
+            <TextBlock Text="B" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Right" Margin="0,20,10,0"/>
+            <Slider x:Name="BlueSlider" Grid.Row="2" Grid.Column="1" Width="200" HorizontalAlignment="Left" Margin="10,20,0,0" ValueChanged="BlueSlider_ValueChanged"/>
+        </Grid>
+
+    </StackPanel>
 </Window>

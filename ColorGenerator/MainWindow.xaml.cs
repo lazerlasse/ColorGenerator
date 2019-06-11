@@ -24,5 +24,20 @@ namespace ColorGenerator
 		{
 			InitializeComponent();
 		}
+
+		private void RedSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+		{
+
+		}
+
+		private void GreenSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+		{
+
+		}
+
+		private void BlueSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+		{
+
+		}
 	}
 }
